@@ -1,7 +1,10 @@
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    height: 1600x;
+}
+
+.pwrap {
     width: 1050px;
+    margin: 0 auto;
 }
 
 .page {
