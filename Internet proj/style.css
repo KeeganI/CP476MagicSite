@@ -42,6 +42,31 @@ body {
     opacity: 0.8;
 }
 
+.dispcard {
+    border-color: black;
+    border-style: inset;
+    border-width: 1px;
+    padding: 4px;
+    float: left;
+    margin: 15px;
+}
+
+.content {
+    border-color: black;
+    border-width: 2px;
+    margin: 15px;
+}
+
+f {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+g {
+    font-size: 12px;
+}
+
 e {
     margin: 40px;
     padding-right: 70px;
