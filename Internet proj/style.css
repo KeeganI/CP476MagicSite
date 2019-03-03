@@ -58,6 +58,7 @@ li.deck {
     font-weight: 1000;
     width: 80%;
     opacity: 0.85;
+    background-image: url(pics/mart1.jpg)
 }
 
 ul.deck {
@@ -73,18 +74,16 @@ ul.deck {
 li.card {
     /*63 x 88 mm  0.7159090909*/
     background-color: red;
-    border-color: black;
-    border-width: 1px;
-    border-style: outset;
     color: black;
     padding: 88px 63px;
     text-decoration: none;
     font-size: 14px;
-    margin: 10px 20px;
+    margin: 40px 40px;
     cursor: pointer;
-    font-weight: 1000;
-    width: 100%;
-    opacity: 0.85;
+    float: left;
+    background-image: url(pics/phoenix.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 ul.card {
@@ -93,7 +92,6 @@ ul.card {
     padding: 0;
     overflow: hidden;
     padding-bottom: 10px;
-    width: 30%;
 }
 
 ul.a {
