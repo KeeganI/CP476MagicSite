@@ -101,7 +101,7 @@ ul.a {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: yellow;
+    background-color: #ff0;
     overflow: hidden;
     border-style: solid;
     border-color: black;
@@ -220,7 +220,7 @@ li a:hover {
 }
 
 li b:hover {
-    background-color: #E8D15F;
+    background-color: #ff0;
     box-shadow: 0 3px 4px black;
     transition: box-shadow;
 }
