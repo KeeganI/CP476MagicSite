@@ -10,12 +10,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = $_GET['q'];
+$query =$_GET['q'];
 
 
 $query = htmlspecialchars($query);
+//we don't allow no injection
+$sql = "SELECT * FROM cards WHERE `name` LIKE '%".mysqli_real_escape_string($conn,$query)."%'";
 
-$sql = "SELECT * FROM cards WHERE `name` LIKE '%".$query."%'";
+
+
 $result = runQuery($conn,$sql);
 
 
