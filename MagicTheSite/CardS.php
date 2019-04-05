@@ -24,11 +24,10 @@ while($quer = mysqli_fetch_array($result))
     <title>
         Card Selected
     </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script type="text/javascript" src="magic.js"></script>
     <div class="pwrap">
         <ul class="a">
             <li>

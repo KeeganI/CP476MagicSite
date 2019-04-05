@@ -16,6 +16,8 @@
   </div>
 </div>
 <br>
+<br>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RZyXU1L3JXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 style = "margin-top: 200px;">The majority of images uploaded onto this site, including images of Magic: The Gathering cards and parts thereof, are copyrighted by Wizards of the Coast.</h2>
 <br>
 <h2>Images are used to illustrate the card or part thereof in question</h2>

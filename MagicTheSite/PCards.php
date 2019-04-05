@@ -23,11 +23,10 @@ $result = runQuery($conn,$sql);
     <title>
         Popular Cards
     </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script type="text/javascript" src="magic.js"></script>
     <div class="pwrap">
         <ul class="a">
             <li>
