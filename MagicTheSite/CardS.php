@@ -3,7 +3,7 @@ include 'functions.php';
 $conn = getDB();
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 $id = $_GET['id'];
 $sql = "SELECT * From cards";
 $result = runQuery($conn,$sql);
@@ -14,7 +14,7 @@ while($quer = mysqli_fetch_array($result))
 		break;
 	}
 }
-	
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,16 +25,22 @@ while($quer = mysqli_fetch_array($result))
         Card Selected
     </title>
     <link rel="stylesheet" href="css/style.css">
-</head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+</head>
 <body>
     <div class="pwrap">
-        <ul class="a">
+    <ul class="a">
             <li>
-                <a href="mainpage.php" style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
+                <a id = "msearch" href="mainpage.php" style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
             </li>
             <li>
-                <input type="text" placeholder="Find Cards..">
+            <form action="csearch.php" method="GET">
+                <input type="text" name = "q" placeholder="Find Cards..">
+            </li>
+            <li>
+            <button type="submit" class = "button1">Search</button>
+            </form>
             </li>
         </ul>
         <div class="mtitle">
@@ -42,7 +48,7 @@ while($quer = mysqli_fetch_array($result))
         </div>
         <hr>
         <div class="dispcard">
-            <img src="pics/<?php echo $row['art'] ?>.jpg" width="260" height="345">
+            <img src="pics/<?php echo $row['art'] ?>.jpg" id="p1" width="260" height="345">
         </div>
         <div class = "sdown">
         <div class="content">
@@ -85,6 +91,17 @@ while($quer = mysqli_fetch_array($result))
 
     </div>
     </div>
+    <script>
+
+$('#p1').mouseenter(function() {
+    $(this).css("cursor","pointer");
+    $(this).animate({width: "300", height: "390"});
+});
+
+$('#p1').mouseleave(function() {
+    $(this).animate({width: "260", height: "345"}, 'slow');
+});
+</script>
 </body>
 
 </html>

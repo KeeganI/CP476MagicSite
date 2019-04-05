@@ -5,7 +5,7 @@ include 'functions.php';
 $conn = getDB();
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
+}
 
 
 $sql = "SELECT * FROM decks";
@@ -24,12 +24,17 @@ $result = runQuery($conn,$sql);
 
 <body>
     <div class="pwrap">
-        <ul class="a">
+    <ul class="a">
             <li>
-                <a href="mainpage.php"  style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
+                <a id = "msearch" href="mainpage.php" style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
             </li>
             <li>
-                <input type="text" placeholder="Find Decks..">
+            <form action="csearch.php" method="GET">
+                <input type="text" name = "q" placeholder="Find Cards..">
+            </li>
+            <li>
+            <button type="submit" class = "button1">Search</button>
+            </form>
             </li>
         </ul>
         <div class="mtitle">

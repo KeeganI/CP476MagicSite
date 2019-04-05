@@ -1,4 +1,7 @@
+
+
 <?php
+
 session_start();
 include 'functions.php';
 
@@ -7,11 +10,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$query = $_GET['q'];
 
-$sql = "SELECT * FROM cards";
+
+$query = htmlspecialchars($query);
+
+$sql = "SELECT * FROM cards WHERE `name` LIKE '%".$query."%'";
 $result = runQuery($conn,$sql);
 
+
 ?>
+
 
 
 
@@ -21,14 +30,15 @@ $result = runQuery($conn,$sql);
 <head>
     <meta charset="UTF-8">
     <title>
-        Popular Cards
+        Search Result
     </title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <script type="text/javascript" src="magic.js"></script>
     <div class="pwrap">
-    <ul class="a">
+        <ul class="a">
             <li>
                 <a id = "msearch" href="mainpage.php" style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
             </li>
@@ -41,8 +51,9 @@ $result = runQuery($conn,$sql);
             </form>
             </li>
         </ul>
+
         <div class="mtitle">
-            <b>Popular Cards </b>
+            <b>Result "<?php echo $query ?>": <?php echo mysqli_num_rows($result) ?></b>
             <br>
             <g> Click a card to visit the card page! </g>
         </div>
@@ -50,10 +61,12 @@ $result = runQuery($conn,$sql);
         while($row = mysqli_fetch_array($result))
         {
         ?>
-           <img src="pics/<?php echo $row["art"]; ?>.jpg" onclick="location.href='cardS.php?id=<?php echo $row["card_id"] ?>';" width = "200" height = "280">
+            <img src="pics/<?php echo $row["art"]; ?>.jpg" onclick="location.href='cardS.php?id=<?php echo $row["card_id"] ?>';" width = "200" height = "280">
             <?php
-        }
+
+    }
             ?>
+
 
 
     </div>

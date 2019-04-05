@@ -34,12 +34,17 @@ while($quer2 = mysqli_fetch_array($result2))
 
 <body>
     <div class="pwrap">
-        <ul class="a">
+    <ul class="a">
             <li>
-                <a href="mainpage.php" style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
+                <a id = "msearch" href="mainpage.php" style="text-decoration:none; font-size: 22 ;">MTS MAIN </a>
             </li>
             <li>
-                <input type="text" placeholder="Find Cards..">
+            <form action="csearch.php" method="GET">
+                <input type="text" name = "q" placeholder="Find Cards..">
+            </li>
+            <li>
+            <button type="submit" class = "button1">Search</button>
+            </form>
             </li>
         </ul>
         </ul>
